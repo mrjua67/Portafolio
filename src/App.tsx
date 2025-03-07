@@ -7,6 +7,7 @@ import { projects } from './data/projects';
 import { skillCategories } from './data/skills';
 import { Language } from './types';
 import { Briefcase } from 'lucide-react';
+import { VisitorComments } from './components/VisitorComments';
 
 function App() {
   const [language, setLanguage] = useState<Language>('en');
@@ -79,10 +80,16 @@ function App() {
             ))}
           </div>
         </section>
+        <div className="min-h-screen bg-gray-100 py-8">
+          <VisitorComments />
+        </div>
+        
       </div>
-
       <Footer language={language} />
+      
+      
     </div>
+
   );
 }
 
